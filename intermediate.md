@@ -3,20 +3,6 @@
 
 ---
 
-## 🧭 목차
-
-1. 컴퓨터 시스템의 전체 구성 이해
-2. 명령어와 컴퓨터 동작의 기본 사이클
-3. CPU의 내부 구조와 작동 원리
-4. 파이프라인 구조의 이해와 성능 향상
-5. 파이프라인의 문제점: Hazard와 해결법
-6. Instruction Set Architecture (ISA)
-7. 메모리 구조: RAM, Cache, Virtual Memory
-8. MIPS 구조와 어셈블리 언어 예시
-9. 고급 주제 요약: 병렬처리, 파이프라인 성능, 캐시 최적화
-
----
-
 ## 1. 💻 컴퓨터 시스템의 전체 구성 이해
 
 ### 컴퓨터는 어떤 부품으로 구성되어 있을까요?
@@ -168,38 +154,6 @@ sw  $s0, 4($s1)       # memory[$s1 + 4] = $s0
 beq $t0, $zero, label # if $t0 == 0 → jump to label
 j   target            # 무조건 점프
 ```
-
----
-
-## 9. 🎯 고급 주제 요약
-
-### 파이프라인 성능
-- CPI(클럭당 명령어 수) 최소화
-- pipeline depth 증가 → 고속 클럭 사용 가능 (단, hazard 복잡도 증가)
-
-### 캐시 최적화
-- 지역성 원리: **Temporal / Spatial Locality**
-- 캐시 정책: Write-through vs Write-back
-- 캐시 구조: Direct-mapped, Set-associative, Fully-associative
-
-### 병렬처리
-- Superscalar: 여러 명령어를 동시에 실행
-- Out-of-Order Execution: 명령어 순서 무시하고 가능한 것 먼저 실행
-- SMT / Hyperthreading: 하나의 CPU 코어가 여러 스레드를 실행
-
----
-
-## 📌 정리
-
-| 주제 | 요약 |
-|------|------|
-| 컴퓨터 구성 | CPU, 메모리, 저장소, I/O로 구성 |
-| 명령어 실행 | Fetch → Decode → Execute → Memory → WriteBack |
-| 파이프라인 | 여러 명령을 동시에 실행해 속도 향상 |
-| Hazard | 파이프라인에서 발생하는 충돌. 해결 필요 |
-| ISA | CPU가 이해하는 명령어 집합 (RISC vs CISC) |
-| 메모리 | RAM, 캐시, 가상 메모리의 계층적 구조 |
-| MIPS | 간단한 RISC ISA로 교육에 자주 사용됨 |
 
 ---
 
